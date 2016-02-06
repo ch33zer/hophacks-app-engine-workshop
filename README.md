@@ -12,3 +12,17 @@ Code for the HopHacks Spring 2016 App Engine Demo
 ```
 git clone https://github.com/ch33zer/hophacks-app-engine-workshop.git
 ```
+
+## Important commands:
+Run the dev server:
+```
+dev_appserver.py .
+```
+Run the dev server, deleting all persistent database entries:
+```
+dev_appserver.py --clear_datastore=yes .
+```
+Launch to production (only available if you signed up for the free trial and created a project ID):
+```
+appcfg.py -A YOUR_PROJECT_ID update .
+```
