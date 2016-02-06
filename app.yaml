@@ -1,0 +1,22 @@
+# The version of the code you are running. Change this to launch different
+# version of the code at once.
+version: 1
+# The runtime you want to use. Change this depending on what language you want
+# your appengine app to run
+runtime: python27
+# Version of the appengine python2.7 runtime to use. Don't change. Or do,
+# I'm a comment not a cop.
+api_version: 1
+# Set this to false if you app can only handle one client at a time.
+threadsafe: true
+
+# What to do when a specific url is requested
+handlers:
+- url: /helloappengine.*
+  script: helloappengine.app
+- url: /hellouser.*
+  script: hellouser.app
+- url: /hellodb.*
+  script: hellodb.app
+- url: /.*
+  script: helloappengine.app
