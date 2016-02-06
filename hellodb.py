@@ -16,7 +16,7 @@ class MainPage(webapp2.RequestHandler):
         recipients = HelloRecipient.query()
         for recipient in recipients:
             self.response.write('<br />')
-            self.response.write('<blockquote>Hello '+recipient.hello_recipient+'</blockquote>')
+            self.response.write('Hello, '+recipient.hello_recipient + '!')
         self.response.out.write("""
           <form action="/hellodb/add_hello_recipient" method="post">
             <span><input type="text" name="recipient" rows="3" cols="60"></input></span>
